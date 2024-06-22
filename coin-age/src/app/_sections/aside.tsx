@@ -97,9 +97,9 @@ function Aside() {
       }`}
     >
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
         fill=""
       ></path>
     </svg>
@@ -152,7 +152,7 @@ function Aside() {
 
   return (
     <aside
-      className={`h-screen hidden lg:flex flex-col bg-lightBackground transition-all duration-300 relative overflow-hidden ${
+      className={`sticky top-0 h-screen hidden lg:flex flex-col bg-lightBackground transition-all duration-300 overflow-hidden ${
         isOpened ? "w-[250px]" : "w-[80px]"
       }`}
     >
@@ -173,7 +173,7 @@ function Aside() {
 
       <div className="flex flex-col gap-3 p-3 border-b border-borderColor h-fit w-full">
         {menuItems.map((menuItem, index) => (
-          <TooltipProvider>
+          <TooltipProvider key={index}>
             <Tooltip>
               <TooltipTrigger>
                 <Link
@@ -182,7 +182,6 @@ function Aside() {
                     menuItem.isActive ? "active" : ""
                   } ${isOpened ? "w-full" : "w-fit"}`}
                   onClick={() => handleClick(index)}
-                  key={index}
                 >
                   {menuItem.menuIcon}
                   <p
