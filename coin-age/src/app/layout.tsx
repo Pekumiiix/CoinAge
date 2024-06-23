@@ -25,10 +25,12 @@ export default function RootLayout({
       <body className="container flex px-0">
         <Aside />
 
-        <div className="flex flex-col w-full min-h-screen bg-myBackground">
+        <div className="flex flex-col w-full min-h-screen bg-myBackground gap-3">
           <Header />
 
-          {children}
+          <main className="flex flex-col gap-3 items-center w-full">
+            {children}
+          </main>
         </div>
 
         <MobileNavigation />

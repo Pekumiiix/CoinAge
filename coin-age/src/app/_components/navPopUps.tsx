@@ -76,10 +76,10 @@ export default function NavPopUps() {
         <PopoverTrigger className="text-base font-medium p-2 outline outline-1 outline-svgFill text-svgFill rounded-lg transition-all duration-300 hover:text-myOrange hover:outline-myOrange lg:font-normal">
           0xcfbuhey...
         </PopoverTrigger>
-        <PopoverContent className="group flex items-center gap-2 px-3 py-2 bg-lightBackground rounded-md border-none">
+        <PopoverContent className="w-fit group flex items-center gap-2 px-3 py-2 bg-lightBackground rounded-md border-none">
           {WalletIcon}
           <p className="text-xs text-lightTextColor cursor-default group-hover:text-white">
-            Connect your wallet to see notifications
+            Connect your wallet
           </p>
         </PopoverContent>
       </Popover>

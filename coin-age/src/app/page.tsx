@@ -1,6 +1,8 @@
 //import Aside from "./_sections/aside";
 //import MobileNavigation from "./_sections/mobileNavigation";
 import type { Metadata } from "next";
+import TradeNavigation from "./_components/tradeNav";
+import AccountSummary from "./_components/accountSummary";
 
 export const metadata: Metadata = {
   title: "CoinAge",
@@ -10,6 +12,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-3 items-center w-full h-screen"></main>
+    <>
+      <TradeNavigation />
+
+      <AccountSummary />
+    </>
   );
 }
