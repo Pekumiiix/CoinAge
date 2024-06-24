@@ -114,7 +114,7 @@ export default function AccountSummary() {
           key={index}
         >
           <div
-            className={`flex items-center p-2 rounded-md h-fit ${
+            className={`flex items-center p-1 sm:p-2 rounded-md h-fit ${
               card.isCredit ? "bg-green-500" : "bg-red-500"
             }`}
           >

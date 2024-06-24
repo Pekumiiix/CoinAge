@@ -19,7 +19,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export default function TradeNavigation() {
+export default function AccountNavigation() {
   const refreshIcon = (
     <svg
       xmlnsXlink="http://www.w3.org/1999/xlink"

@@ -1,21 +1,21 @@
-//import Aside from "./_sections/aside";
-//import MobileNavigation from "./_sections/mobileNavigation";
-import type { Metadata } from "next";
-import TradeNavigation from "./_components/tradeNav";
-import AccountSummary from "./_components/accountSummary";
+"use client";
 
-export const metadata: Metadata = {
-  title: "CoinAge",
-  description:
-    "Monitor your cryptocurrency balance, track your portfolio, and manage your account effortlessly with our comprehensive crypto management platform. Stay updated with real-time data, detailed analytics, and personalized insights to make informed investment decisions.",
-};
+import ConnectWallet from "./_components/_account/connectWallet";
+import AccountNavigation from "./_components/_account/accountNav";
+import AccountShortcuts from "./_components/_account/accountShortcuts";
+import AccountSummary from "./_components/_account/accountSummary";
 
 export default function Home() {
   return (
     <>
-      <TradeNavigation />
+      <AccountNavigation />
 
       <AccountSummary />
+
+      <div className="px-3 w-full h-fit grid mb-12 md:mb-0 md:grid-cols-1 lg:grid-cols-3 gap-5 pb-5">
+        <AccountShortcuts />
+        <ConnectWallet />
+      </div>
     </>
   );
 }
